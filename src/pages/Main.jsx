@@ -1,16 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
-import SideMenu from '../components/SideMenu'
-import Content from '../components/Content'
+import PRCard from '../components/PRCard'
 
 const Main = () => {
   return (
     <div className='main'>
-      <Header />
-      <div className="body">
-        <SideMenu />
-        <Content />
-      </div>
+      <PRCard />
     </div>
   )
 }
