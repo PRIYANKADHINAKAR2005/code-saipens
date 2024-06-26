@@ -13,7 +13,52 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Inter', Times, serif;
+    background-color: #17161e;
 }
 
+.pull-reqs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
 
+.pr-card{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: #201f2a;
+}
+
+.pr-card .top{
+    height: 35%;
+    width: 100%;
+    display: flex;
+}
+
+.pr-card .top .left{
+    width: 30%;
+}
+
+.pr-card .top .left img{
+    width: 75%;
+    border-radius: 50%;
+}
+
+.pr-card .top .right{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pr-card .top .right h4{
+    color: #ddd;
+}
 
