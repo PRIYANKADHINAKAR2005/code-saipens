@@ -110,3 +110,25 @@ body{
     font-size: 18px;
     font-weight: 600;
 }
+
+
+@media all and (max-width : 375px) {
+    .pull-reqs{
+        padding: 10px;
+    }
+    .pr-card{
+        width: 260px;
+        font-size: 16px;
+        height: 310px;
+    }
+    .pr-card .top{
+        height: 18%;
+    }
+    .pr-card .top .right{
+        font-size: 16px;
+    }
+    .pr-card .bottom{
+        font-size: 16px;
+        gap: 7px;
+    }
+}
