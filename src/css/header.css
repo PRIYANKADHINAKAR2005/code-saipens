@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,37 +7,56 @@ header{
     padding: 20px;
 }
 
-header .title{
+header .title {
     color: var(--white);
     width: 250px;
 }
 
-header .nav{
+header .nav {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
-    align-items: stretch;
+    gap: 6%;
+    width: 300px;
+    align-items: center;
     transition: .6s;
 }
 
-header .nav li{
+header .nav li {
     cursor: pointer;
-}
-
-header a{
-    color: var(--white);
-    padding: 10px 18px;
+    width: auto;
+    width: 100%;
     border-radius: 7px;
 }
 
-header a:hover{
+header a {
+    padding: 10px 14px;
+    color: var(--white);
+    text-wrap: nowrap;
+}
+
+header li:hover a, header .login-btn:hover a{
     color: rgb(5, 211, 5);
     background-color: var(--bg);
 }
 
-header .login-btn{
-    width: 250px;
+header .login-btn {
+    width: 20%;
     text-align: end;
     font-size: 18px;
     font-weight: 600;
+}
+
+@media all and (max-width: 768px) {
+    header .nav {
+        display: none;
+    }
+
+    header .login-btn {
+        display: none;
+    }
+
+    header .title {
+        width: 100%;
+        text-align: center;
+    }
 }
