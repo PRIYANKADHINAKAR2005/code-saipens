@@ -2,7 +2,7 @@ import { faCheckCircle, faClock, faTimesCircle } from '@fortawesome/free-solid-s
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-const PRCard = (props) => {
+const PrCard = (props) => {
 
     return (
         <div className='pr-card'>
@@ -32,4 +32,4 @@ const PRCard = (props) => {
     )
 }
 
-export default PRCard
+export default PrCard

@@ -23,3 +23,7 @@ body{
     font-family: 'Inter', Times, serif;
     background-color: var(--bg);
 }
+
+.main{
+    padding-top: 100px;
+}
