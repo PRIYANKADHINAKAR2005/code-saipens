@@ -37,17 +37,23 @@ header .nav {
 header .nav li {
     cursor: pointer;
     width: auto;
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 7px;
 }
 
 header a {
+    padding: 10px 15px;
     color: var(--white);
     text-wrap: nowrap;
 }
 
 header li:hover{
     background-color: var(--bg);
+}
+
+header li a.active{
+    color: #07f79b;
+    font-weight: 600;
 }
 
 header li:hover a{

@@ -1,7 +1,7 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({isAside,setIsAside}) => {
 
@@ -15,11 +15,11 @@ const Sidebar = ({isAside,setIsAside}) => {
                 <FontAwesomeIcon icon={faTimes} className='aside-close' onClick={handleAside}/>
             </div>
             <ul className="nav">
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/dashboard'>Dashboard</Link></li>
-                <li><Link to='/leaderboard'>Leaderboard</Link></li>
-                <li><Link to='/profile'>Profile</Link></li>
-                <li><Link to='/contact-us'>Contact us</Link></li>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
+                <li><NavLink to='/profile'>Profile</NavLink></li>
+                <li><NavLink to='/contact-us'>Contact us</NavLink></li>
             </ul>
         </aside>
     );
