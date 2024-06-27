@@ -4,17 +4,6 @@ import React from 'react'
 
 const PRCard = (props) => {
 
-    // const props = {
-    //     repoName: 'testRepo',
-    //     prId: 1930827724,
-    //     title: 'Update text.txt',
-    //     requesterName: 'isai0210',
-    //     requestedTime: 'June 20, 2024 at 08:34:13 PM',
-    //     prStatus: 'Merged',
-    //     // prStatus: 'Denied',
-    //     // prStatus: 'Pending'
-    // }
-
     return (
         <div className='pr-card'>
             <div className="top">

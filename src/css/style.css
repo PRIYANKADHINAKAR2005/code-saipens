@@ -9,126 +9,17 @@
     letter-spacing: .2px;
 }
 
+:root{
+    --white: #fff;
+    --l-white: #ddd;
+    --bg: #17161e;
+    --l-bg: #201f2a;
+}
+
 body{
-    color: white;
+    color: var(--white);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Inter', Times, serif;
-    background-color: #17161e;
-}
-
-.pull-reqs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 30px;
-}
-
-.pr-card{
-    display: flex;
-    flex-direction: column;
-    padding: 18px;
-    width: 300px;
-    height: 350px;
-    border-radius: 15px;
-    background-color: #201f2a;
-}
-
-.pr-card .top{
-    height: 25%;
-    width: 100%;
-    display: flex;
-}
-
-.pr-card .top .left{
-    width: 30%;
-}
-
-.pr-card .top .left img{
-    width: 75%;
-    border-radius: 50%;
-}
-
-.pr-card .top .right{
-    width: 60%;
-    height: 100%;
-    margin: auto;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.pr-card .top .right h4{
-    color: #ddd;
-}
-
-.pr-card .bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 16px;
-}
-
-.pr-card .bottom .time-created{
-    background-color: rgb(31, 27, 43);
-    border-radius: 10px;
-}
-
-.pr-card .bottom p {
-    padding: 10px;
-    border-radius: 10px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-wrap: nowrap;
-}
-
-.pr-card .pr-status{
-    background-color: #17161e;
-    padding: 10px;
-    border-radius: 5px
-}
-
-.pr-card .pr-status.merged{
-    color: rgb(23, 247, 23);
-}
-
-.pr-card .pr-status.pending{
-    color: #dfb11b;
-}
-
-.pr-card .pr-status.denied{
-    color: #d51212;
-}
-
-.pr-card .bottom .view-btn{
-    border-radius: 10px;
-    padding: 7px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
-@media all and (max-width : 375px) {
-    .pull-reqs{
-        padding: 10px;
-    }
-    .pr-card{
-        width: 260px;
-        font-size: 16px;
-        height: 310px;
-    }
-    .pr-card .top{
-        height: 18%;
-    }
-    .pr-card .top .right{
-        font-size: 16px;
-    }
-    .pr-card .bottom{
-        font-size: 16px;
-        gap: 7px;
-    }
+    background-color: var(--bg);
 }
