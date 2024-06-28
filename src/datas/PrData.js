@@ -13,7 +13,7 @@ export const prData = [
       repoName: 'Flask Chat App',
       prId: '2',
       title: 'Fix bug in login',
-      requesterName: 'Jane Smith',
+      requesterName: 'Jane',
       requestedTime: 'June 21, 2024 at 10:15:42 AM',
       prStatus: 'Pending'
     },
@@ -202,7 +202,7 @@ export const prData = [
       repoName: 'Next.js Blog',
       prId: '22',
       title: 'Add dark mode',
-      requesterName: 'Jane Smith',
+      requesterName: 'Jane',
       requestedTime: 'July 11, 2024 at 09:30:20 PM',
       prStatus: 'Pending'
     },
@@ -211,7 +211,7 @@ export const prData = [
       repoName: 'Gatsby Site',
       prId: '12',
       title: 'Improve performance',
-      requesterName: 'Jane Smith',
+      requesterName: 'Jane',
       requestedTime: 'July 1, 2024 at 01:05:40 PM',
       prStatus: 'Merged'
     },
@@ -220,7 +220,7 @@ export const prData = [
       repoName: 'Gatsby Site',
       prId: '23',
       title: 'Update dependencies',
-      requesterName: 'Jane Smith',
+      requesterName: 'Jane',
       requestedTime: 'July 12, 2024 at 07:45:15 PM',
       prStatus: 'Pending'
     }

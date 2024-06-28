@@ -18,7 +18,7 @@ const Sidebar = ({isAside,setIsAside}) => {
                 <li onClick={handleAside}><NavLink to='/'>Home</NavLink></li>
                 <li onClick={handleAside}><NavLink to='/dashboard'>Dashboard</NavLink></li>
                 <li onClick={handleAside}><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
-                <li onClick={handleAside}><NavLink to='/profile'>Profile</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/profile/Jane'>My Pull Requests</NavLink></li>
                 <li onClick={handleAside}><NavLink to='/contact-us'>Contact us</NavLink></li>
             </ul>
         </aside>

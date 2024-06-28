@@ -30,7 +30,7 @@ const Main = () => {
           <Route path='/dashboard/:repoName' element={<Dashboard filter='repo' />} />
           <Route path='/dashboard/user/:userName' element={<Dashboard filter='user' />} />
           <Route path='/leaderboard' element={<Leaderboard />} />
-          <Route path='/profile' element={<Profile />} />
+          <Route path='/profile/:userName' element={<Profile />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='*' element={<h1 style={{ width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Sorry Sapiend, There's no content ahead🙌</h1>} />
         </Routes>

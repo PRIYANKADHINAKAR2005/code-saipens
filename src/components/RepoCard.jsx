@@ -12,7 +12,7 @@ const RepoCard = (props) => {
                 <p className='pr-status pending'>Pending pull requests: {props.PrPending}</p>
             </div>
             <div className="repo-link">
-                <a href="https://github.com">View Repository</a> <Link to='Flask_Chat_App'>View Contributors</Link>
+                <a href="https://github.com">View Repository</a> <Link to={props.repoName}>View Contributors</Link>
             </div>
         </div>
     )
