@@ -96,6 +96,17 @@ header li:hover a{
     } */
 }
 
+@media all and (max-width:425px) {
+    header{
+        height: 55px;
+    }
+    header .title img{
+        width: 45px;
+        height: 45px;
+        margin-right: 5px;
+    }
+}
+
 
 @media all and (max-width:375px) {
     header{

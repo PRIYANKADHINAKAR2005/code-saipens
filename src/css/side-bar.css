@@ -67,7 +67,12 @@ aside .nav li a.active{
 }
 
 
-@media all and (max-width:320px) {
+@media all and (max-width:426px) {
+    aside{
+        position: fixed;
+        right: 0;
+        z-index: 3;
+    }
     aside.open{
         width: 100%;
     }

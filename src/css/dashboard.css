@@ -240,6 +240,12 @@
         width: 80%;
         align-self: center;
     }   
+    .repo-card, .user-card{
+        width: 300px;
+    }
+    .filter-via{
+        top: 55px;
+    }
     /* .user-card{
         width: 260px;
         font-size: 16px;

@@ -32,3 +32,9 @@ body{
 .main.aside-on{
     padding-right: 200px;
 }
+
+@media all and (max-width:426px) {
+    .main.aside-on{
+        padding-right: 0;
+    }
+}
