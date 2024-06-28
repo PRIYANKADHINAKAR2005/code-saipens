@@ -232,7 +232,7 @@
 }
 
 
-@media all and (max-width : 375px) {
+@media all and (max-width : 425px) {
     .pull-reqs{
         padding: 10px;
     }
