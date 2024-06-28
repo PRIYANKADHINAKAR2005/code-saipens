@@ -1,12 +1,11 @@
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 65px;
     background-color: var(--l-bg);
     padding: 0 20px;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
     position: fixed;
     top: 0;
 }
@@ -32,7 +31,7 @@ header .title img{
 
 .side-bar-open{
     font-size: larger;
-    margin-right: 20px;
+    margin-left: auto;
     cursor: pointer;
     padding: 20px;
 }
@@ -88,7 +87,6 @@ header li:hover a{
 
     header .title {
         width: 100%;
-        justify-content: center;
         font-size: 22px;
     }
     /* .side-bar-open{
@@ -96,14 +94,22 @@ header li:hover a{
     } */
 }
 
-@media all and (max-width:425px) {
+@media all and (max-width:426px) {
     header{
         height: 55px;
+        padding: 0;
+    }
+    header .title{
+        padding-left: 10px;
+        justify-content: start;
     }
     header .title img{
         width: 45px;
         height: 45px;
         margin-right: 5px;
+    }
+    header .side-bar-open{
+        margin-right: 0;
     }
 }
 

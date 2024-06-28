@@ -1,12 +1,22 @@
 .filter-via{
+    margin-bottom: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 65px;    
+    z-index: 5;
+    padding: 5px 0;
+    /* background-color: var(--bg); */
+}
+
+.filter-via ul{
     display: flex;
+    margin: auto;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 20px;
-    position: sticky;
-    top: 65px;
-    padding: 5px 0;
-    background-color: var(--bg);
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--t-bg);
 }
 
 .filter-via li{
@@ -62,9 +72,10 @@
     padding: 18px;
     border-radius: 15px;
     font-size: 16px;
-    background-color: #201f2a;
     width: 260px;
     height: auto;
+    background: #2d2c3bc2;
+    backdrop-filter: blur(5px);
 }
 
 .user-card .top{
@@ -156,7 +167,7 @@
 .repo-card{
     width: 250px;
     height: auto;
-    background-color: var(--l-bg);
+    background: #2d2c3bc2;
     padding: 18px;
     border-radius: 15px;
     font-size: 16px;
@@ -237,27 +248,23 @@
         padding: 10px;
     }
     .dashboard-search{
-        width: 80%;
+        width: 85vw;
         align-self: center;
     }   
     .repo-card, .user-card{
-        width: 300px;
+        width: 85vw;
     }
     .filter-via{
-        top: 55px;
+        top: 50px;
+        padding: 5px;
     }
-    /* .user-card{
-        width: 260px;
-        font-size: 16px;
+    .filter-via ul{
+        width: 250px;
     }
-    .user-card .top{
-        height: 18%;
+    .filter-via li{
+        padding: 10px 0;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
     }
-    .user-card .top .right{
-        font-size: 16px;
-    }
-    .user-card .bottom{
-        font-size: 16px;
-        gap: 7px;
-    } */
 }

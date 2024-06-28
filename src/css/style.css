@@ -14,6 +14,7 @@
     --l-white: #ddd;
     --bg: #17161e;
     --l-bg: #201f2a;
+    --t-bg:#17161ee9;
 }
 
 body{
@@ -25,16 +26,12 @@ body{
 }
 
 .main{
-    padding-top: 100px;
+    padding-top: 80px;
     transition: .5s;
+    position: relative;
+    z-index: 0;
 }
 
-.main.aside-on{
-    padding-right: 200px;
-}
-
-@media all and (max-width:426px) {
-    .main.aside-on{
-        padding-right: 0;
-    }
+.main.blur{
+    filter: blur(2px);
 }

@@ -144,7 +144,8 @@ const Dashboard = ({ filter }) => {
 
   return (
     <>
-      <ul className="filter-via">
+      <div className="filter-via">
+        <ul>
         <li className={location.pathname.startsWith("/dashboard/user") ? "" : "active"}>
           <Link to="/dashboard">Repositories</Link>
         </li>
@@ -152,6 +153,7 @@ const Dashboard = ({ filter }) => {
           <Link to="/dashboard/user">Users</Link>
         </li>
       </ul>
+      </div>
 
       { filter === 'repo' && (params.repoName ? <FilteredRepo /> : <AllRepos />) }
       { filter === 'user' && (params.userName ? <FilteredUser /> : <UserDets />) }

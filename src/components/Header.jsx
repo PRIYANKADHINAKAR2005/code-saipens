@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/codesapiens.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
-const Header = ({setIsAside}) => {
+const Header = ({isAside, setIsAside}) => {
 
     const handleAside = () => {
-        setIsAside(true);
+        setIsAside(prev => !prev);
     }
 
     return (
@@ -17,7 +17,10 @@ const Header = ({setIsAside}) => {
                 <h1>CODESAPIENS</h1>
             </Link>
             <div className="side-bar-open" onClick={handleAside}>
-                <FontAwesomeIcon icon={faBars} className='aside-open' />
+                {
+                    isAside ? <FontAwesomeIcon icon={faTimes} className='aside-open' />
+                        :<FontAwesomeIcon icon={faBars} className='aside-open' />
+                }
             </div>
             {/* <ul className="nav">
                 <li><NavLink to='/'>Home</NavLink></li>
