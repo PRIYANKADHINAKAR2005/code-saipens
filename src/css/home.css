@@ -1,0 +1,161 @@
+.home{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .title{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffb84d, #f60, red, #f60, #ffb84d);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    letter-spacing: 1px;
+}
+
+@keyframes gradientAnimation {  
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+.hero{
+    display: flex;
+    min-height: calc(100vh - 300px);
+    height: auto;
+    padding: 0 20px;
+}
+
+.hero .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.hero .left h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.hero .left h1:nth-child(2){
+    background: linear-gradient(45deg, #ffb84d, #f60, red, #f60, #ffb84d);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+.hero .left h3{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.hero .links{
+    display: flex;
+    gap: 10px;
+}
+
+.hero .links a{
+    color: white;
+    background-color: var(--l-bg);
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.hero .links a:first-child{
+    color: black;
+    background-color: white;
+}
+
+.hero .links a:hover{
+    color: rgb(13, 194, 13);
+}
+
+.hero .right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .right img{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home section{
+    margin: 30px 60px;
+    padding: 20px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.home section h1{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.home section p{
+    color: #ddd;
+    margin-left: 20px;
+}
+
+.home .what-soc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2b2a37c1;
+}
+
+
+@media all and (max-width:768px) {
+    .home .title p{
+        font-size: 40px;
+        padding: 0 100px;
+    }
+    .home .hero{
+        padding: 30px;
+        margin-top: 20px;
+    }
+    .hero .left h1{
+        font-size: 30px;
+    }
+}
+
+@media all and (max-width:46px) {
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .hero .left, .hero .right{
+        width: 100%;
+    }
+    .home .hero{
+        padding: 0 10px;
+        margin-top: 0;
+    }
+    .home .title{
+        font-size: 28px;
+    }
+    .hero .left h1{
+        font-size: 25px;
+    }
+}

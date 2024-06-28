@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Home from './Home';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter, useLocation } from 'react-router-dom';
 import '../css/header.css';
 import '../css/style.css';
 import '../css/dashboard.css';
 import '../css/side-bar.css';
+import '../css/home.css';
 import Leaderboard from './Leaderboard';
 import ContactUs from './ContactUs';
 import Profile from './Profile';
 import Dashboard from './Dashboard';
 import Sidebar from '../components/Sidebar';
-// import Particle from '../components/Particle';
 import StarsCanvas from '../components/Stars';
 import Particle from '../components/Particle';
 
@@ -19,8 +19,20 @@ const Main = () => {
 
   const [isAside, setIsAside] = useState(false);
 
+
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
+
   return (
     <HashRouter>
+      <ScrollToTop /> 
       <Header isAside={isAside} setIsAside={setIsAside} />
       <Sidebar isAside={isAside} setIsAside={setIsAside} />
       <div className={'main ' + (isAside && 'blur')}>

@@ -8,6 +8,7 @@ header {
     z-index: 4;
     position: fixed;
     top: 0;
+    border-bottom: 1px solid var(--bg);
 }
 
 header .title {
@@ -40,40 +41,6 @@ header .title img{
     color: green;
 }
 
-
-/* header .nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-    transition: .6s;
-}
-
-header .nav li {
-    cursor: pointer;
-    width: auto;
-    padding: 10px;
-    border-radius: 7px;
-}
-
-header a {
-    padding: 10px 15px;
-    color: var(--white);
-    text-wrap: nowrap;
-}
-
-header li:hover{
-    background-color: var(--bg);
-}
-
-header li a.active{
-    color: #07f79b;
-    font-weight: 600;
-}
-
-header li:hover a{
-    color: rgb(5, 211, 5);
-} */
 
 
 @media all and (max-width: 768px) {

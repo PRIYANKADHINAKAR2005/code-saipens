@@ -22,13 +22,6 @@ const Header = ({isAside, setIsAside}) => {
                         :<FontAwesomeIcon icon={faBars} className='aside-open' />
                 }
             </div>
-            {/* <ul className="nav">
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
-                <li><NavLink to='/profile'>Profile</NavLink></li>
-                <li><NavLink to='/contact-us'>Contact us</NavLink></li>
-            </ul> */}
         </header>
     )
 }
