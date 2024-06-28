@@ -6,6 +6,7 @@ header {
     background-color: var(--l-bg);
     padding: 0 20px;
     width: 100%;
+    z-index: 2;
     position: fixed;
     top: 0;
 }
@@ -14,6 +15,9 @@ header .title {
     color: var(--white);
     align-items: center;
     display: flex;
+}
+
+header .title h1{
     font-size: 25px;
 }
 
@@ -26,7 +30,19 @@ header .title img{
     background-color: aliceblue;
 }
 
-header .nav {
+.side-bar-open{
+    font-size: larger;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.side-bar-open:hover{
+    color: green;
+}
+
+
+/* header .nav {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -58,11 +74,8 @@ header li a.active{
 
 header li:hover a{
     color: rgb(5, 211, 5);
-}
+} */
 
-.side-bar-open{
-    display: none;
-}
 
 @media all and (max-width: 768px) {
     header .nav {
@@ -78,7 +91,23 @@ header li:hover a{
         justify-content: center;
         font-size: 22px;
     }
-    .side-bar-open{
+    /* .side-bar-open{
         display: block;
+    } */
+}
+
+
+@media all and (max-width:375px) {
+    header{
+        padding: 0 10px;
+    }
+    header .title{
+        justify-content: start;
+    }
+    .side-bar-open{
+        margin-right: 0;
+    }
+    header .title img{
+        margin-right: 10px;
     }
 }

@@ -3,8 +3,10 @@ aside{
     display: flex;
     flex-direction: column;
     position: fixed;
+    right: 0;
     height: 100vh;
-    background-color: var(--bg);
+    z-index: 3;
+    background-color: var(--l-bg);
     transition: transform .5s ease;
 }
 
@@ -13,12 +15,19 @@ aside.open{
 }
 
 aside.closed{
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 aside .side-bar-close{
-    text-align: end;
+    align-self: end;
     padding: 20px;
+    cursor: pointer;
+    font-size: larger;
+    margin-right: 20px;
+}
+
+aside .side-bar-close:hover{
+    color: green;
 }
 
 aside .nav{
@@ -29,18 +38,23 @@ aside .nav{
 }
 
 aside .nav li{
-    text-align: center;
-    padding: 20px 10px;
+    height: 60px;
+    width: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--l-white);
+}
+
+aside .nav li:hover a{
+    color: rgb(12, 220, 12);
 }
 
 aside .nav li a{
     color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
-
-aside{
-    display: none;
-}
-
 
 @media all and (max-width:768px) {
     aside{
@@ -55,5 +69,8 @@ aside{
     }
     aside.closed{
         width: 100%;
+    }
+    aside .side-bar-close{
+        margin-right: 10px;
     }
 }

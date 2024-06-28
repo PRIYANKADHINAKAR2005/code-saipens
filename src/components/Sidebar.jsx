@@ -11,15 +11,15 @@ const Sidebar = ({isAside,setIsAside}) => {
 
     return (
         <aside className={isAside ? 'open' : 'closed'}>
-            <div className="side-bar-close">
-                <FontAwesomeIcon icon={faTimes} className='aside-close' onClick={handleAside}/>
+            <div className="side-bar-close" onClick={handleAside}>
+                <FontAwesomeIcon icon={faTimes} className='aside-close'/>
             </div>
             <ul className="nav">
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                <li><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
-                <li><NavLink to='/profile'>Profile</NavLink></li>
-                <li><NavLink to='/contact-us'>Contact us</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/'>Home</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/leaderboard'>Leaderboard</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/profile'>Profile</NavLink></li>
+                <li onClick={handleAside}><NavLink to='/contact-us'>Contact us</NavLink></li>
             </ul>
         </aside>
     );

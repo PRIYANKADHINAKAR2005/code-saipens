@@ -26,4 +26,9 @@ body{
 
 .main{
     padding-top: 100px;
+    transition: .5s;
+}
+
+.main.aside-on{
+    padding-right: 200px;
 }

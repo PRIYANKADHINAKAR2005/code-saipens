@@ -3,10 +3,49 @@
     gap: 20px;
     justify-content: center;
     margin-bottom: 20px;
+    position: sticky;
+    top: 65px;
+    padding: 5px 0;
+    background-color: var(--bg);
+}
+
+.filter-via li{
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 .filter-via a{
+    color: white;
+    padding: 10px 20px;
+}
+
+.filter-via li.active{
+    background-color: var(--l-bg);
+}
+
+.filter-via li.active a{
     color: rgb(9, 199, 9);
+}
+
+.dashboard-search{
+    width: 500px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    padding: 8px 10px;
+    display: flex;
+    gap: 5px;
+    color: black;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.dashboard-search input{
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
 .pull-reqs{
@@ -62,34 +101,33 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    gap: 8px;
+    gap: 4px;
 }
 
-.user-card .bottom .time-created{
+.time-created{
     background-color: rgb(31, 27, 43);
     font-size: 13px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .user-card .bottom p {
     padding: 10px;
     border-radius: 10px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-wrap: nowrap;
 }
 
-.user-card .pr-status{
+.pr-status{
     background-color: #17161e;
     padding: 10px;
+    font-size: 14px;
     border-radius: 5px
 }
 
-.user-card .pr-status.merged{
+.pr-status.merged{
     color: rgb(23, 247, 23);
 }
 
-.user-card .pr-status.pending{
+.pr-status.pending{
     color: #dfb11b;
 }
 
@@ -100,6 +138,9 @@
     outline: none;
     font-size: 18px;
     font-weight: 600;
+    background-color: white;
+    color: black;
+    text-align: center;
 }
 
 /* repo-card */
@@ -109,12 +150,12 @@
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .repo-card{
     width: 250px;
-    height: 320px;
+    height: auto;
     background-color: var(--l-bg);
     padding: 18px;
     border-radius: 15px;
@@ -124,9 +165,6 @@
 .repo-card h1{
     font-size: 20px;
     text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-wrap: nowrap;
     color: white;
     border-bottom: 1px solid green;
     padding-bottom: 10px;
@@ -162,6 +200,7 @@
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
     text-align: center;
     background-color: var(--bg);   
     font-weight: 600;
@@ -176,15 +215,34 @@
     color: #09c409;
 }
 
+.repo-card .dets{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.repo-title{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.repo-card .creator-name{
+    text-align: end;
+    margin: 10px ;
+}
+
 
 @media all and (max-width : 375px) {
     .pull-reqs{
         padding: 10px;
     }
-    .user-card{
+    .dashboard-search{
+        width: 80%;
+        align-self: center;
+    }   
+    /* .user-card{
         width: 260px;
         font-size: 16px;
-        height: 310px;
     }
     .user-card .top{
         height: 18%;
@@ -195,5 +253,5 @@
     .user-card .bottom{
         font-size: 16px;
         gap: 7px;
-    }
+    } */
 }

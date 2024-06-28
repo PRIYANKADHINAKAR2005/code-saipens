@@ -1,6 +1,7 @@
 import { faCheckCircle, faClock } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const UserCard = (props) => {
 
@@ -27,8 +28,9 @@ const UserCard = (props) => {
                             {props.prStatus}
                         </div>
                         <p>Pull req ID: {props.prId}</p>
+                        <p>Repo: {props.repoName}</p>
                         <p>Title:  {props.title}</p>
-                        <button className='view-btn'>View Details</button>
+                        <a href='https://github.com' className='view-btn'>View Details</a>
                     </>
                 }
                 {
@@ -37,7 +39,7 @@ const UserCard = (props) => {
                         <p className='time-created'>Total no of pull requests: 20</p>
                         <p className='pr-status merged'>Merged pull requests: 20</p>
                         <p className='pr-status pending'>Pending pull requests: 20</p>
-                        <button className='view-btn'>View Details</button>
+                        <Link to={props.requesterName} className='view-btn'>View Details</Link>
                     </>
                 }
             </div>

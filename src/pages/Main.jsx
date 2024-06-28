@@ -20,15 +20,15 @@ const Main = () => {
     <BrowserRouter>
       <Header isAside={isAside} setIsAside={setIsAside} />
       <Sidebar isAside={isAside} setIsAside={setIsAside} />
-      <div className='main'>
+      <div className={'main '+ (isAside && 'aside-on')}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' >
             <Route index element={<Dashboard filter='repo' />} />
             <Route path='user' element={<Dashboard filter='user' />} />
           </Route> 
-          <Route path='/dashboard/:repoName' element={<Dashboard />} />
-          <Route path='/dashboard/user/:userName' element={<Dashboard />} />
+          <Route path='/dashboard/:repoName' element={<Dashboard filter='repo' />} />
+          <Route path='/dashboard/user/:userName' element={<Dashboard filter='user' />} />
           <Route path='/leaderboard' element={<Leaderboard />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/contact-us' element={<ContactUs />} />
