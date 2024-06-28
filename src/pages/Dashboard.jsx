@@ -15,7 +15,7 @@ const Dashboard = ({ filter }) => {
   const repoUsers = params.repoName ? prData.filter(item => item.repoName === params.repoName) : [];
   const userRepos = params.userName ? prData.filter(item => item.requesterName === params.userName) : [];
 
-  userRepos.length!==0 && console.log(userRepos);
+  userRepos.length !== 0 && console.log(userRepos);
 
   const FilteredRepo = () => {
     return (
@@ -51,8 +51,8 @@ const Dashboard = ({ filter }) => {
     const handleRepo = (e) => {
       setSearchTerm(e.target.value);
     };
-  
-    const searchedRepos = repoData.filter(repo => 
+
+    const searchedRepos = repoData.filter(repo =>
       repo.repoName.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -112,10 +112,12 @@ const Dashboard = ({ filter }) => {
     const handleUser = (e) => {
       setSearchTerm(e.target.value);
     };
-  
-    const searchedUsers = prData.filter(user => 
+
+    const searchedUsers = prData.filter(user =>
       user.requesterName.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+
 
     return (
       <>
@@ -124,19 +126,29 @@ const Dashboard = ({ filter }) => {
           <input type="text" placeholder='Search with username' id='user' onChange={handleUser} />
         </label>
         <div className="pull-reqs">
-          {searchedUsers.map((pr, index) => (
-            <UserCard
+          {searchedUsers.map((pullReq, index) => {
+
+            const totalReq = prData.filter(pr => pr.requesterName === pullReq.requesterName).length;
+
+            const mergedReq = prData.filter(pr => pr.requesterName === pullReq.requesterName && pr.prStatus === 'Merged').length;
+
+            const pendingReq = prData.filter(pr => pr.requesterName === pullReq.requesterName && pr.prStatus === 'Pending').length;
+
+            return <UserCard
               key={index}
               type="user"
-              img={pr.img}
-              repoName={pr.repoName}
-              prId={pr.prId}
-              title={pr.title}
-              requesterName={pr.requesterName}
-              requestedTime={pr.requestedTime}
-              prStatus={pr.prStatus}
+              img={pullReq.img}
+              repoName={pullReq.repoName}
+              prId={pullReq.prId}
+              title={pullReq.title}
+              requesterName={pullReq.requesterName}
+              requestedTime={pullReq.requestedTime}
+              prStatus={pullReq.prStatus}
+              totalPR={totalReq}
+              prMerged={mergedReq}
+              prPending={pendingReq}
             />
-          ))}
+          })}
         </div>
       </>
     );
@@ -146,17 +158,17 @@ const Dashboard = ({ filter }) => {
     <>
       <div className="filter-via">
         <ul>
-        <li className={location.pathname.startsWith("/dashboard/user") ? "" : "active"}>
-          <Link to="/dashboard">Repositories</Link>
-        </li>
-        <li className={location.pathname.startsWith("/dashboard/user") ? "active" : ""}>
-          <Link to="/dashboard/user">Users</Link>
-        </li>
-      </ul>
+          <li className={location.pathname.startsWith("/dashboard/user") ? "" : "active"}>
+            <Link to="/dashboard">Repositories</Link>
+          </li>
+          <li className={location.pathname.startsWith("/dashboard/user") ? "active" : ""}>
+            <Link to="/dashboard/user">Users</Link>
+          </li>
+        </ul>
       </div>
 
-      { filter === 'repo' && (params.repoName ? <FilteredRepo /> : <AllRepos />) }
-      { filter === 'user' && (params.userName ? <FilteredUser /> : <UserDets />) }
+      {filter === 'repo' && (params.repoName ? <FilteredRepo /> : <AllRepos />)}
+      {filter === 'user' && (params.userName ? <FilteredUser /> : <UserDets />)}
     </>
   );
 };

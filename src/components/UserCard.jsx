@@ -36,9 +36,9 @@ const UserCard = (props) => {
                 {
                     props.type === 'user' &&
                     <>
-                        <p className='time-created'>Total no of pull requests: 20</p>
-                        <p className='pr-status merged'>Merged pull requests: 20</p>
-                        <p className='pr-status pending'>Pending pull requests: 20</p>
+                        <p className='time-created'>Total no of pull requests: {props.totalPR}</p>
+                        <p className='pr-status merged'>Merged pull requests: {props.prMerged}</p>
+                        <p className='pr-status pending'>Pending pull requests: {props.prPending}</p>
                         <Link to={props.requesterName} className='view-btn'>View Details</Link>
                     </>
                 }
