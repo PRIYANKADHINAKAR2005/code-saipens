@@ -141,21 +141,36 @@
     }
 }
 
-@media all and (max-width:46px) {
+@media all and (max-width:426px) {
     .hero{
         flex-direction: column-reverse;
     }
     .hero .left, .hero .right{
         width: 100%;
+        gap: 0;
+    }
+    .hero .right img{
+        width: 50%;
     }
     .home .hero{
         padding: 0 10px;
         margin-top: 0;
     }
-    .home .title{
+    .home .title p{
         font-size: 28px;
+        padding: 0 10px;
     }
     .hero .left h1{
         font-size: 25px;
+    }
+    .home section{
+        margin: 10px;
+        padding: 10px;
+    }
+    .home .what-soc{
+        margin-top: 30px;
+    }
+    .home section p{
+        margin-left: 5px;
     }
 }
